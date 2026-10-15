@@ -6,8 +6,8 @@
     --tinta: #1c2a26;
     --suave: #6b7a74;
     --linha: #e3e8e4;
-    --verde: #0f3d33;
-    --verde-claro: #b9e4cf;
+    --verde: #082f49;
+    --verde-claro: #6398c4;
     --vermelho: #c2413b;
     --raio: 16px;
 }
@@ -158,11 +158,27 @@ h3 {
     border-bottom: none;
 }
 
-.gasto span:last-of-type,
-.gasto strong {
+.gasto span:last-of-type {
     font-weight: 700;
     color: var(--vermelho);
     white-space: nowrap;
+}
+
+/* Botão excluir */
+.botao-excluir {
+    padding: 7px 10px;
+    background: var(--vermelho);
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 8px;
+}
+
+.botao-excluir:hover {
+    background: #a8322d;
+}
+
+.botao-excluir:active {
+    transform: scale(0.95);
 }
 
 /* Total */
@@ -190,5 +206,14 @@ h3 {
 
     .saldo h2 {
         font-size: 2.2rem;
+    }
+
+    .gasto {
+        gap: 8px;
+    }
+
+    .botao-excluir {
+        padding: 6px 8px;
+        font-size: 0.75rem;
     }
 }

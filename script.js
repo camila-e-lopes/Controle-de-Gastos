@@ -46,6 +46,8 @@ function adicionarGasto(){
         document.getElementById("saldo").textContent =
             "R$ " + saldo.toFixed(2);
 
+        atualizarAvisoSaldo();
+
         gasto.remove();
     };
 
@@ -65,7 +67,21 @@ function adicionarGasto(){
     document.getElementById("saldo").textContent =
         "R$ " + saldo.toFixed(2);
 
+    // ATUALIZA O AVISO DO SALDO
+    atualizarAvisoSaldo();
+
     // LIMPA OS CAMPOS
     document.getElementById("descricao").value = "";
     document.getElementById("valor").value = "";
+}
+
+// FUNÇÃO PARA AVISAR QUANDO O SALDO ESTIVER BAIXO
+function atualizarAvisoSaldo(){
+
+    if(saldo < 100){
+        document.getElementById("avisoSaldo").textContent =
+            "⚠️ Atenção: seu saldo está baixo!";
+    } else {
+        document.getElementById("avisoSaldo").textContent = "";
+    }
 }
